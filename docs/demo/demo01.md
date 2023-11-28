@@ -19,18 +19,18 @@ Android 中控制组件的显示方式有两种：
 这两种方式控制 Android 界面显示的效果是完全一样的。实际上 XML 文件的属性与 java
 代码中方法之间存在着一一对应关系，在此列出常用的属性供参考：
 
-|XML 属性|对应方法 |说明|
-|-|-|-|
-|android: alpha|setAlpha|设置组件的透明度|
-|android: background|setBackground|设置组件的背景|
-|android: clickable|setClickable|设置组件是否可以触发单击事件|
-|android: focusable|setFocusable|设置组件是否可以得到焦点|
-|android: id|setId|设置组件的唯一 ID|
-|android: minHeight|setMinHeight|设置组件的最小高度|
-|android: minWidth|setMinWidth|设置组件的最小宽度|
-|android: padding|setPadding|在组件四边设置边距|
-|android: scaleX|setScaleX|设置组件在 X 轴方向的缩放|
-|android: visibility|setVisibility|设置组件是否可见|
+| XML 属性              | 对应方法          | 说明             |
+|---------------------|---------------|----------------|
+| android: alpha      | setAlpha      | 设置组件的透明度       |
+| android: background | setBackground | 设置组件的背景        |
+| android: clickable  | setClickable  | 设置组件是否可以触发单击事件 |
+| android: focusable  | setFocusable  | 设置组件是否可以得到焦点   |
+| android: id         | setId         | 设置组件的唯一 ID     |
+| android: minHeight  | setMinHeight  | 设置组件的最小高度      |
+| android: minWidth   | setMinWidth   | 设置组件的最小宽度      |
+| android: padding    | setPadding    | 在组件四边设置边距      |
+| android: scaleX     | setScaleX     | 设置组件在 X 轴方向的缩放 |
+| android: visibility | setVisibility | 设置组件是否可见       |
 
 几乎每个界面组件都需要设置
 
@@ -55,3 +55,85 @@ Android 中控制组件的显示方式有两种：
 - 需要动态变化的属性则交给 java 代码控制
 
 例如：可以在 XML 布局文件中设置文本显示框的高度和宽度以及初始化时显示文字，在代码中根据实际需要动态地改变现实的文字。
+
+# Demo
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="15dp"
+        tools:context=".MainActivity">
+
+    <!--TextView-->
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello World!"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/custom_phone"
+              android:autoLink="phone"/>
+
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/custom_email"
+              android:autoLink="email"/>
+
+    <TextView
+            android:id="@+id/main_text_html"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <!--EditView-->
+    <EditText android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:inputType="text"
+              android:hint="@string/main_edit_text_info"
+              android:autofillHints="password"/>
+
+    <!--Button-->
+    <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#c04851"
+            android:text="@string/button"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="15sp"/>
+
+    <!--ImageView-->
+    <ImageView android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:scaleType="fitCenter"
+               android:src="@drawable/pic_01"
+               android:contentDescription="@string/pic_01"/>
+
+
+</LinearLayout>
+```
+
+```java
+public class MainActivity extends AppCompatActivity {
+
+    @SuppressLint("SetTextI18n")
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        TextView htmlView = findViewById(R.id.main_text_html);
+
+        htmlView.setText(Html.fromHtml("<h1>这是 H1 标签</h1>", Html.FROM_HTML_MODE_LEGACY));
+    }
+}
+```
+
+<img src="https://jz-cbq-1311841992.cos.ap-beijing.myqcloud.com/images/image-20231128195223359.png" alt="image-20231128195223359" style="zoom:80%;" />
