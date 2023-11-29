@@ -11,10 +11,10 @@
         android:gravity="center"
         tools:context=".MainActivity">
     <Button
-            android:id="@+id/main_btn_eventV1"
+        android:id="@+id/main_btn_eventV1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/v1"/>
+        android:text="@string/v1"/>
     <Button
             android:id="@+id/main_btn_eventV2"
             android:layout_width="match_parent"
@@ -38,6 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/v5"/>
+
 
 
 </LinearLayout>

@@ -19,18 +19,18 @@ Android 中控制组件的显示方式有两种：
 这两种方式控制 Android 界面显示的效果是完全一样的。实际上 XML 文件的属性与 java
 代码中方法之间存在着一一对应关系，在此列出常用的属性供参考：
 
-| XML 属性              | 对应方法          | 说明             |
-|---------------------|---------------|----------------|
-| android: alpha      | setAlpha      | 设置组件的透明度       |
-| android: background | setBackground | 设置组件的背景        |
-| android: clickable  | setClickable  | 设置组件是否可以触发单击事件 |
-| android: focusable  | setFocusable  | 设置组件是否可以得到焦点   |
-| android: id         | setId         | 设置组件的唯一 ID     |
-| android: minHeight  | setMinHeight  | 设置组件的最小高度      |
-| android: minWidth   | setMinWidth   | 设置组件的最小宽度      |
-| android: padding    | setPadding    | 在组件四边设置边距      |
-| android: scaleX     | setScaleX     | 设置组件在 X 轴方向的缩放 |
-| android: visibility | setVisibility | 设置组件是否可见       |
+|XML 属性|对应方法 |说明|
+|-|-|-|
+|android: alpha|setAlpha|设置组件的透明度|
+|android: background|setBackground|设置组件的背景|
+|android: clickable|setClickable|设置组件是否可以触发单击事件|
+|android: focusable|setFocusable|设置组件是否可以得到焦点|
+|android: id|setId|设置组件的唯一 ID|
+|android: minHeight|setMinHeight|设置组件的最小高度|
+|android: minWidth|setMinWidth|设置组件的最小宽度|
+|android: padding|setPadding|在组件四边设置边距|
+|android: scaleX|setScaleX|设置组件在 X 轴方向的缩放|
+|android: visibility|setVisibility|设置组件是否可见|
 
 几乎每个界面组件都需要设置
 

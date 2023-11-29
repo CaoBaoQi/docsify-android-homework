@@ -1,6 +1,6 @@
 # 支付
 
-- dialog 通知栏与 Toast 的基本使用
+- dialog 通知栏与 Toat 的基本使用
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

@@ -4,11 +4,10 @@
 - 按钮点击事件
 
 ```xml
-
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="#16646A64"/>  <!-- 填充颜色 -->
-    <stroke android:color="#000000"/> <!-- 边框颜色 -->
-    <corners android:radius="10dp"/>   <!-- 圆角半径 -->
+    <solid android:color="#16646A64" />  <!-- 填充颜色 -->
+    <stroke android:color="#000000" /> <!-- 边框颜色 -->
+    <corners android:radius="10dp" />   <!-- 圆角半径 -->
 </shape>
 ```
 
